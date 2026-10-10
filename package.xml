@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<?xml-model
+  href="http://download.ros.org/schema/package_format2.xsd"
+  schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="2">
+  <name>tinyxml2_vendor</name>
+  <version>0.1.0</version>
+  <description>
+    Wrapper around tinyxml2, providing a dependency on tinyxml2 if available or
+    building it locally (cross-compiled for VxWorks) if not found. Pinned to
+    11.0.0 to match the lyrical target distro (Ubuntu 26.04 libtinyxml2-dev).
+  </description>
+  <maintainer email="Andrei.Kholodnyi@gmail.com">Andrei Kholodnyi</maintainer>
+  <license>Apache License 2.0</license> <!-- the contents of this package are Apache 2.0 -->
+  <license>Zlib</license>               <!-- tinyxml2 uses the Zlib license -->
+
+  <url type="repository">https://github.com/leethomason/tinyxml2</url>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>git</buildtool_depend>
+
+  <depend>libtinyxml2-dev</depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
